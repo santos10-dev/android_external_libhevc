@@ -69,7 +69,7 @@ void ihevcd_init_function_ptr(void *pv_codec)
         case ARCH_X86_SSSE3:
             ihevcd_init_function_ptr_ssse3(pv_codec);
             break;
-        case ARCH_X86_SSE42:
+/*        case ARCH_X86_SSE42:
             ihevcd_init_function_ptr_sse42(pv_codec);
             break;
         case ARCH_X86_AVX2:
@@ -78,7 +78,7 @@ void ihevcd_init_function_ptr(void *pv_codec)
 #else
             ihevcd_init_function_ptr_sse42(pv_codec);
 #endif
-            break;
+            break;*/
         default:
             ihevcd_init_function_ptr_ssse3(pv_codec);
             break;
