@@ -1,4 +1,8 @@
+ifeq ($(TARGET_BOARD_PLATFORM),clovertrail)
+libhevcd_cflags_x86 += -DX86 -DDISABLE_AVX2 -m32 -mno-avx -DDEFAULT_ARCH=D_ARCH_X86_SSE3
+else
 libhevcd_cflags_x86 += -DX86 -DDISABLE_AVX2 -m32 -msse4.2 -mno-avx -DDEFAULT_ARCH=D_ARCH_X86_SSE42
+endif
 
 libhevcd_inc_dir_x86   +=  $(LOCAL_PATH)/decoder/x86
 libhevcd_inc_dir_x86   +=  $(LOCAL_PATH)/common/x86
